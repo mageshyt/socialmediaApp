@@ -8,6 +8,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Platform,
 } from "react-native";
 import React, { FC } from "react";
 import { DATA, bgs } from "../constants/Data";
@@ -16,7 +17,6 @@ const { width, height } = Dimensions.get("window");
 
 const onboarding = () => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
-  console.log(scrollX);
 
   const router = useRouter();
   return (
@@ -57,9 +57,7 @@ const onboarding = () => {
                 <Text className="font-bold text-white text-3xl mb-4 ">
                   {item.title}
                 </Text>
-                <Text className="text-black text-base font-bold  ">
-                  {item.description}
-                </Text>
+                <Text>{item.description}</Text>
               </View>
             </View>
           );
