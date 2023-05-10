@@ -69,3 +69,27 @@ export type InputType = {
   errorMessage?: string;
   about?: string;
 };
+
+export const LoginInputData: InputType[] = [
+  {
+    label: "email",
+    id: "email",
+    type: "email",
+
+    placeholder: "Enter your email",
+    required: true,
+    pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/,
+    errorMessage: "It should be a valid email address!",
+  },
+  {
+    label: "password",
+    id: "password",
+    type: "password",
+    placeholder: "Enter your password",
+    required: true,
+    pattern:
+      /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/,
+    errorMessage:
+      "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+  },
+];

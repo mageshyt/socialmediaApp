@@ -13,7 +13,7 @@ const register = () => {
   const navigator = useNavigation();
   const router = useRouter();
   return (
-    <SafeAreaView className="flex-1   mx-3">
+    <SafeAreaView className="flex-1 mx-3">
       <View className="mt-2 ml-5">
         <MaterialIcons
           onPress={() => navigator.goBack()}
@@ -24,18 +24,18 @@ const register = () => {
       </View>
 
       {/*  */}
-      <View className=" space-y-4  mt-10">
+      <View className="mt-10 space-y-4 ">
         <UbuntuText className="text-4xl text-center">
           Create an account
         </UbuntuText>
 
-        <Text className="text-center text-gray-400 mx-8 font-bold">
+        <Text className="mx-8 font-bold text-center text-gray-400">
           Fill your information below or register with a social account
         </Text>
       </View>
 
       {/* inputs  */}
-      <View className=" mt-6  ">
+      <View className="mt-6 ">
         {RegisterInputData.map((input) => (
           <FormInput key={input.id} {...input} />
         ))}
@@ -50,19 +50,16 @@ const register = () => {
       {/* social icons */}
       <SocialLogin />
 
-      {/* sing in and submit  btn  */}
-      <View className="flex-row mt-4     w-full justify-between items-center ">
-        <MonoText
-          onPress={() => router.push("/auth/login")}
-          className="text-white text-lg"
-        >
-          Sing In
-        </MonoText>
+      {/* register btn */}
 
-        <TouchableOpacity className="h-16 w-16 bg-gray-600   flex items-center justify-center rounded-full p-3">
-          <MaterialIcons name="arrow-forward-ios" size={24} color="white" />
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity
+        onPress={() => router.push("feed/main")}
+        className="w-full p-3 mt-10 bg-gray-900 rounded-xl "
+      >
+        <Text className="text-2xl font-bold text-center text-blue-400">
+          Register
+        </Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -70,7 +67,7 @@ const register = () => {
 const Divider = () => (
   <View className="flex-row items-center mt-4">
     <View className="border-b border-gray-400 w-[120px]  " />
-    <Text className="text-center text-gray-400 mx-8 font-bold">
+    <Text className="mx-8 font-bold text-center text-gray-400">
       Or register with
     </Text>
     <View className="border-b    border-gray-400 w-[120px]" />

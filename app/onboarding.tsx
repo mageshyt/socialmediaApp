@@ -20,7 +20,7 @@ const onboarding = () => {
 
   const router = useRouter();
   return (
-    <SafeAreaView className="flex-1 items-center justify-center">
+    <SafeAreaView className="items-center justify-center flex-1">
       <BackDrop scrollX={scrollX} />
       <Square scrollX={scrollX} />
       <Animated.FlatList
@@ -54,7 +54,7 @@ const onboarding = () => {
               </View>
 
               <View style={{ flex: 0.3 }}>
-                <Text className="font-bold text-white text-3xl mb-4 ">
+                <Text className="mb-4 text-3xl font-bold text-white ">
                   {item.title}
                 </Text>
                 <Text>{item.description}</Text>
@@ -70,7 +70,7 @@ const onboarding = () => {
         <TouchableOpacity className="bg-gray-900 w-[130px]  p-3 rounded-xl ">
           <Text
             onPress={() => router.push("/auth/login")}
-            className="text-xl  text-blue-400 font-bold text-center"
+            className="text-xl font-bold text-center text-blue-400"
           >
             Login
           </Text>
@@ -81,7 +81,7 @@ const onboarding = () => {
         <TouchableOpacity className="border-gray-900 border-4 w-[130px]  p-3 rounded-xl ">
           <Text
             onPress={() => router.push("/auth/register")}
-            className="text-xl  text-black font-bold text-center"
+            className="text-xl font-bold text-center text-black"
           >
             Register
           </Text>
@@ -96,7 +96,7 @@ interface IndicatorProps {
 }
 const Indicator: FC<IndicatorProps> = ({ scrollX }) => {
   return (
-    <View className="absolute bottom-20  flex-row">
+    <View className="absolute flex-row bottom-[75px]">
       {DATA.map((_, i) => {
         const inputRange = [(i - 1) * width, i * width, (i + 1) * width]; // [prev, current, next]
         const scale = scrollX.interpolate({
@@ -117,7 +117,7 @@ const Indicator: FC<IndicatorProps> = ({ scrollX }) => {
               opacity,
             }}
             key={i}
-            className="w-3 h-3 bg-gray-900 rounded-full mx-2 "
+            className="w-3 h-3 mx-2 bg-gray-900 rounded-full "
           ></Animated.View>
         );
       })}
