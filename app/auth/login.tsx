@@ -1,9 +1,15 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from "react-native";
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { UbuntuText } from "../../components/StyledText";
-import { LoginInputData } from "../../constants/Data";
+import { LoginInputData, RegisterInputData } from "../../constants/Data";
 import FormInput from "../../components/FormInput/FormInput";
 import { Controller, useForm } from "react-hook-form";
 import SocialLogin from "../../components/Auth Components/SocialLogin";
@@ -17,8 +23,8 @@ const login = () => {
     getValues,
   } = useForm({ mode: "onBlur" });
   return (
-    <SafeAreaView className="flex-1 mx-3">
-      <View className="mt-2 ml-5">
+    <SafeAreaView className="flex-1 mx-3 space-y-10 android:mt-10 ">
+      <View className="mt-2 ml-5 ">
         <MaterialIcons
           onPress={() => navigator.goBack()}
           name="arrow-back-ios"
@@ -38,7 +44,7 @@ const login = () => {
       </View>
 
       {/* inputs  */}
-      <View className="my-auto space-y-4">
+      <KeyboardAvoidingView className="justify-center " behavior="padding">
         {LoginInputData.map((input) => (
           <Controller
             key={input.id}
@@ -69,21 +75,21 @@ const login = () => {
             )}
           />
         ))}
+      </KeyboardAvoidingView>
 
-        {/* sing in and submit  btn  */}
-        <View>
-          <TouchableOpacity
-            onPress={handleSubmit((data) => console.log(data))}
-            className="w-full p-3 bg-gray-900 rounded-xl "
-          >
-            <Text className="text-2xl font-bold text-center text-blue-400">
-              Login
-            </Text>
-          </TouchableOpacity>
-        </View>
-        {/* social icons */}
-        <SocialLogin />
+      {/* sing in and submit  btn  */}
+      <View>
+        <TouchableOpacity
+          onPress={handleSubmit((data) => console.log(data))}
+          className="w-full p-3 bg-gray-900 rounded-xl "
+        >
+          <Text className="text-2xl font-bold text-center text-blue-400">
+            Login
+          </Text>
+        </TouchableOpacity>
       </View>
+      {/* social icons */}
+      <SocialLogin />
 
       {/* register with social */}
     </SafeAreaView>

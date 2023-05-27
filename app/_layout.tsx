@@ -48,11 +48,16 @@ function RootLayoutNav() {
     <>
       <ThemeProvider value={DarkTheme}>
         <Stack>
-          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
           <Stack.Screen name="auth/register" options={{ headerShown: false }} />
           <Stack.Screen name="auth/login" options={{ headerShown: false }} />
           <Stack.Screen name="feed/main" options={{ headerShown: false }} />
+
+          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
           {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
+          <Stack.Screen
+            name="feed/story/[playvideo]"
+            options={{ headerShown: false, presentation: "modal" }}
+          />
         </Stack>
       </ThemeProvider>
     </>

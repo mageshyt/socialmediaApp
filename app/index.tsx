@@ -20,7 +20,7 @@ const index = () => {
         onPress={() => router.push("/onboarding")}
         className="bg-gray-900 w-[190px]  p-3 rounded-xl "
       >
-        <Text className="text-2xl  text-blue-400 font-bold text-center">
+        <Text className="text-2xl font-bold text-center text-blue-400">
           on boarding
         </Text>
       </TouchableOpacity>

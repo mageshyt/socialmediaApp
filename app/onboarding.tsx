@@ -24,6 +24,7 @@ const onboarding = () => {
       <BackDrop scrollX={scrollX} />
       <Square scrollX={scrollX} />
       <Animated.FlatList
+      
         data={DATA}
         keyExtractor={(item) => item.key}
         showsHorizontalScrollIndicator={false}
@@ -103,6 +104,7 @@ const Indicator: FC<IndicatorProps> = ({ scrollX }) => {
           inputRange: inputRange,
           outputRange: [0.8, 1.4, 0.8],
           extrapolate: "clamp",
+
         });
 
         const opacity = scrollX.interpolate({
@@ -115,6 +117,7 @@ const Indicator: FC<IndicatorProps> = ({ scrollX }) => {
             style={{
               transform: [{ scale }],
               opacity,
+              
             }}
             key={i}
             className="w-3 h-3 mx-2 bg-gray-900 rounded-full "

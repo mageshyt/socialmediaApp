@@ -1,3 +1,5 @@
+import { post, postUser } from "../typings";
+
 export const bgs = ["#A5BBFF", "#DDBEFE", "#FF63ED", "#B98EFF"];
 export const DATA = [
   {
@@ -91,5 +93,76 @@ export const LoginInputData: InputType[] = [
       /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/,
     errorMessage:
       "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+  },
+];
+
+const authors: postUser[] = [
+  {
+    id: "1",
+    username: "Magesh Uchiha",
+    profileImage: "https://i.ibb.co/0jZQY1Z/1.jpg",
+  },
+];
+
+export const PostData: post[] = [
+  {
+    id: "1",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
+  },
+  {
+    id: "2",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
+  },
+  {
+    id: "3",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
+  },
+  {
+    id: "4",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
+  },
+  {
+    id: "5",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
+  },
+  {
+    id: "6",
+    timestamp: "2021-07-01T11:00:00.000Z",
+    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    caption: "This is a post",
+    likes: 123,
+    comments: 12,
+    shares: 44,
+    author: authors[0],
   },
 ];
