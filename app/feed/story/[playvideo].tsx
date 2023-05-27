@@ -3,8 +3,6 @@ import React, { useMemo } from "react";
 import { Video, ResizeMode } from "expo-av";
 
 import { Stack, useLocalSearchParams, useNavigation } from "expo-router";
-import { MaterialIcons } from "@expo/vector-icons";
-import { useRoute } from "@react-navigation/native";
 
 const PlayVideo = () => {
   const video = React.useRef(null);
@@ -16,9 +14,8 @@ const PlayVideo = () => {
 
   // get url from router
   const url = `https://ce08-103-98-63-240.ngrok-free.app/video${
-    parseInt(playvideo as string) % 4
+    parseInt(playvideo as string) % 5
   }.mp4`;
-  console.log("👉 url ", url);
 
   return (
     <SafeAreaView>

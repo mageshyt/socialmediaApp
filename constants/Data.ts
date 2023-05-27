@@ -1,3 +1,4 @@
+import { randomImage } from "../lib/RandomImage";
 import { post, postUser } from "../typings";
 
 export const bgs = ["#A5BBFF", "#DDBEFE", "#FF63ED", "#B98EFF"];
@@ -107,9 +108,10 @@ const authors: postUser[] = [
 export const PostData: post[] = [
   {
     id: "1",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
-    caption: "This is a post",
+    timestamp: "2023-05-027T11:16:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
+    caption:
+      "Master Machine Learning with Scikit-learn: Elevate Your Data Science Game and Become a Sklearn Expert!",
     likes: 123,
     comments: 12,
     shares: 44,
@@ -117,9 +119,10 @@ export const PostData: post[] = [
   },
   {
     id: "2",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
-    caption: "This is a post",
+    timestamp: "2023-05-027T13:16:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
+    caption:
+      "Don’t let their judgement hurt you … stay focused on your course … this game is long … as long as you feel good about you … nothing will ever stop you …. Make this weekend about loving and respecting yourself … being patient, not worrying about adversities or bumps in the road and knowing who you are … I love you ❤️ now go start loving yourself ❤️",
     likes: 123,
     comments: 12,
     shares: 44,
@@ -127,8 +130,8 @@ export const PostData: post[] = [
   },
   {
     id: "3",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    timestamp: "2023-05-027T14:16:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
     caption: "This is a post",
     likes: 123,
     comments: 12,
@@ -137,8 +140,8 @@ export const PostData: post[] = [
   },
   {
     id: "4",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    timestamp: "2023-05-027T11:15:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
     caption: "This is a post",
     likes: 123,
     comments: 12,
@@ -147,8 +150,8 @@ export const PostData: post[] = [
   },
   {
     id: "5",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    timestamp: "2023-05-027T11:16:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
     caption: "This is a post",
     likes: 123,
     comments: 12,
@@ -157,8 +160,8 @@ export const PostData: post[] = [
   },
   {
     id: "6",
-    timestamp: "2021-07-01T11:00:00.000Z",
-    postImage: ["https://i.ibb.co/0jZQY1Z/1.jpg"],
+    timestamp: "2023-05-027T13:16:00.000Z",
+    postImage: [randomImage(), randomImage(), randomImage()],
     caption: "This is a post",
     likes: 123,
     comments: 12,

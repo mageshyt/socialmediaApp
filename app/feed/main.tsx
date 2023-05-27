@@ -8,6 +8,7 @@ import { Icon } from "../../components/Icon/Icon";
 import Stories from "../../components/Stories/Stories";
 import PostCard from "../../components/post-components/PostCard";
 import { PostData } from "../../constants/Data";
+import PostBox from "../../components/post-components/PostBox";
 const index = () => {
   const { user } = UseUser();
 
@@ -50,18 +51,17 @@ const index = () => {
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <>
-            <View>
-              <FlatList
-                className="mt-5 "
-                data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
-                keyExtractor={(item) => item.toString()}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                renderItem={({ item }) => <Stories idx={item} />}
-              />
-            </View>
+            <FlatList
+              className="mt-5 "
+              data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+              keyExtractor={(item) => item.toString()}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => <Stories idx={item} />}
+            />
+
             {/* posts */}
-            <View className="flex-1 p-3">
+            <View className="flex-1 p-3 ">
               <FlatList
                 className="mt-5"
                 data={PostData}

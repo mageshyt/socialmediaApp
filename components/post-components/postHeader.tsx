@@ -11,7 +11,7 @@ const PostHeader: FC<PostHeaderProps> = (props) => {
   console.log("👉 props", props);
   const { userInfo, timestamp } = props;
   return (
-    <View className="flex-row space-x-2">
+    <View className="flex-row mb-2 space-x-2">
       <View className="border-2 border-[#00c4ff] rounded-2xl">
         <Image
           source={{
